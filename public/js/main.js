@@ -1,6 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+require('../bower-components/react');
+require('react-dom');
 
-export default () => {
-    ReactDOM.render( 'hello', document.getElementById('react-thingy'));
-};
+
+var Hello = React.createClass({
+    displayName: 'Hello',
+    render: function() {
+        return React.createElement("div", null, "Hello ", this.props.name);
+    }
+});
